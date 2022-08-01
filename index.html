@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,30 +143,28 @@
         </ul>
     </div>
 
-    <!-- Contact -->
+
     <div class="w3-container" id="contact" style="margin-top:75px">
         <h1 class="sarga"><b>Kapcsolat</b></h1>
         <hr style="width:50px;border:5px solid lightskyblue" class="w3-round">
         <p><b>Várom megkeresését emailben is!</b></p>
 
-        <form method="post" action="">
+        <form method="post" action="mail.php">
             <div class="w3-section">
                 <label>Név</label>
-                <input class="w3-input w3-border" id="Name" type="text" name="Name" required>
+                <input class="w3-input w3-border" id="name" type="text" name="name" required>
             </div>
             <div class="w3-section">
                 <label>Email</label>
-                <input class="w3-input w3-border" id="Eil" type="email" name="Email" required>
+                <input class="w3-input w3-border" id="mail" type="email" name="email" required>
             </div>
             <div class="w3-section">
                 <label>Üzenet</label>
-                <textarea class="w3-input w3-border" id="essage" type="text" name="Message" required></textarea>
+                <textarea class="w3-input w3-border" id="message" type="text" name="message" required></textarea>
             </div>
-            <button id=ubmit type="submit" value="Submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Üzenet küldése</button>
+            <button id=Submit type="submit" value="küldés" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Üzenet küldése</button>
         </form>
     </div>
-
-
 
 
 
@@ -187,43 +186,6 @@
 <div style="height: 50px"><p></p></div>
 
 
-
-        <?php
-if(isset($_POST["Submit"])){
-$to = "kaszaleila@gmail.com";
-$subject = "Ask us mail";
-$from=$_POST["email"];
-$message=$_POST["message"];
-$headers = "From: $from";mail($to,$subject,$message,$headers);
-echo "Email sent.";
-}
-?>
-
-        <form id="form1" name="form1" method="post" action="" >
-            <table width="95%" border="0" align="center" cellpadding="5" cellspacing="1">
-                <tr class="cream">
-                    <td colspan="2" align="left" valign="top">
-                        <strong>Ask Us </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right" valign="top">E-mail : </td>
-                    <td align="left" valign="top"><input name="email" type="text" id="email" ></td>
-                </tr>
-                <tr>
-                    <td align="right" valign="top">Message : </td>
-                    <td align="left" valign="top">
-                        <textarea name="message" cols="40" rows="5" id="message"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right" valign="top">&nbsp;</td>
-                    <td align="left" valign="top">
-                        <input name="Submit" type="submit" id="Submit" value="Submit" >
-                    </td>
-                </tr>
-            </table>
-        </form>
 
 
 <script>
